@@ -28,6 +28,7 @@ public class Blockchain : MonoBehaviour
     public string db_url = "https://fir-token-ccdbb-default-rtdb.asia-southeast1.firebasedatabase.app/";
 
     public Button ClaimButton;
+    public TMP_Text userText;
 
 
     private void Awake()
@@ -121,6 +122,7 @@ public class Blockchain : MonoBehaviour
             this.username = jsonData["username"];
             PlayerPrefs.SetString("username", username);
             Debug.Log("User retrieved. Username: " + username);
+            userText.text = username;
             callback.Invoke();
         }
     }

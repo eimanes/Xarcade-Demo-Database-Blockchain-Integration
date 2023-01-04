@@ -144,6 +144,7 @@ public class NewInput : MonoBehaviour
             this.username = jsonData["username"];
             PlayerPrefs.SetString("username", username);
             Debug.Log("User retrieved. Username: " + username);
+            userText.text = username;
             callback.Invoke();
         }
     }

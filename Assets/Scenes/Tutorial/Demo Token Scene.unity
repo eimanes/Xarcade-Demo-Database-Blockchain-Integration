@@ -5436,6 +5436,7 @@ MonoBehaviour:
   Database: {fileID: 1064506059}
   db_url: https://fir-token-ccdbb-default-rtdb.asia-southeast1.firebasedatabase.app/
   ClaimButton: {fileID: 1489462670}
+  userText: {fileID: 1518968962}
 --- !u!1 &1065604812
 GameObject:
   m_ObjectHideFlags: 0
