@@ -17,5 +17,9 @@
 -	We use REST because Firebase SDK is not available for Standalone Unity Builds (Windows, MacOS, Linux).
 -	Developers are recommended to look forward in the documentation on Firebase Database in Unity with REST API.
 
+### Flowchart
+Picture.png
+
+
 ## More Tutorial
 [Tutorial Unity WebGL with Firebase using REST API](https://github.com/eimanes/Xarcade-Demo-Database-Blockchain-Integration/tree/main/TutorialFirebaseForUnityWebGL)

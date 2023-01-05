@@ -33,6 +33,7 @@ public class Blockchain : MonoBehaviour
 
     private void Awake()
     {
+        
         if (Instance == null)
         {
             Instance = this;
@@ -54,6 +55,7 @@ public class Blockchain : MonoBehaviour
     public void Start()
     {
         Time.timeScale = 1;
+        CallAuth();
         DontDestroyOnLoad(this.gameObject);
         client = new HttpClient();
      

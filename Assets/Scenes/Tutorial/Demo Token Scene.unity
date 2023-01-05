@@ -5428,9 +5428,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bearer: xar-K1yKcEICAWuh10ZylQOs-bearer-3AQ3fOPMueqBlJS7f7UH-admin-P1ESJbighL6htWzLvPwX
   baseUrl: https://xar-autosigner.proximaxtest.com
-  auth: F1B97343E59407D1388AAF34FB67810C789A4ECAE846350E8B08A68C6797BF8B37274373734C9D41
+  auth: 
   gameId: 'A0DAD481E83C0997 '
-  token_id: 
+  token_id: BDT
   username: 
   deeplinkURL: 
   Database: {fileID: 1064506059}

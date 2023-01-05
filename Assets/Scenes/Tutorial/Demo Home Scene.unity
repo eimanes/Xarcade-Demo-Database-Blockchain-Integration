@@ -1854,7 +1854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bearer: xar-K1yKcEICAWuh10ZylQOs-bearer-3AQ3fOPMueqBlJS7f7UH-admin-P1ESJbighL6htWzLvPwX
   baseUrl: https://xar-autosigner.proximaxtest.com
-  auth: F1B97343E59407D1388AAF34FB67810C789A4ECAE846350E8B08A68C6797BF8B37274373734C9D41
+  auth: 5825BB776F8DFB72BDAE8B9E9C387BE3F5B01CED63D0FDA9BDE043E54F1F6FE9252CB74E214D85A3
   gameId: 'A0DAD481E83C0997 '
   token_id: BDT
   username: 
@@ -1862,6 +1862,7 @@ MonoBehaviour:
   Database: {fileID: 1067594719}
   db_url: https://fir-token-ccdbb-default-rtdb.asia-southeast1.firebasedatabase.app/
   ClaimButton: {fileID: 1538537714}
+  userText: {fileID: 0}
 --- !u!1 &1106889260
 GameObject:
   m_ObjectHideFlags: 0
