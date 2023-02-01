@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3B7CF685-8889-8ED1-599B-5E414A6D40A9}</ProjectGuid>
+    <ProjectGuid>{87A2EE5C-BB8A-94F7-B5AD-FBCB5279FDB3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,6 +64,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\FullSerializer\Source\fsISerializationCallbacks.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Scripts\Objects\FirebaseUser.cs" />
     <Compile Include="Assets\WebGLSupport\WebGLInput\WebGLInput.cs" />
     <Compile Include="Assets\WebGLSupport\WebGLInput\Wrapper\WrappedInputField.cs" />
     <Compile Include="Assets\FullSerializer\Source\Aot\fsAotConfiguration.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\RestClient\Packages\RSG.Promise\EnumerableExt.cs" />
     <Compile Include="Assets\FullSerializer\Source\Converters\fsWeakReferenceConverter.cs" />
     <Compile Include="Assets\RestClient\Packages\RSG.Promise\Promise_NonGeneric.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Scripts\Objects\FirebaseError.cs" />
     <Compile Include="Assets\FullSerializer\Source\Converters\fsArrayConverter.cs" />
     <Compile Include="Assets\FullSerializer\Source\Internal\fsCyclicReferenceManager.cs" />
     <Compile Include="Assets\FullSerializer\Source\fsExceptions.cs" />
@@ -91,12 +93,14 @@
     <Compile Include="Assets\RestClient\Packages\Proyecto26.RestClient\Helpers\RequestException.cs" />
     <Compile Include="Assets\FullSerializer\Source\Converters\fsTypeConverter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Examples\Utils\ExampleScenesHandler.cs" />
     <Compile Include="Assets\RestClient\Packages\RSG.Promise\Exceptions\PromiseStateException.cs" />
     <Compile Include="Assets\FullSerializer\Source\fsSerializer.cs" />
     <Compile Include="Assets\FullSerializer\Source\fsConverterRegistrar.cs" />
     <Compile Include="Assets\RestClient\Packages\RSG.Promise\Promise.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Examples\Firestore\FirestoreExampleHandler.cs" />
     <Compile Include="Assets\RestClient\Packages\Proyecto26.RestClient\Helpers\RequestHelper.cs" />
     <Compile Include="Assets\FullSerializer\Source\Converters\fsEnumConverter.cs" />
     <Compile Include="Assets\FullSerializer\Source\fsConfig.cs" />
@@ -107,6 +111,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\FullSerializer\Source\fsContext.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Scripts\FirebaseBridge\FirebaseDatabase.cs" />
     <Compile Include="Assets\FullSerializer\Source\Converters\fsKeyValuePairConverter.cs" />
     <Compile Include="Assets\WebGLSupport\WebGLWindow\WebGLWindow.cs" />
     <Compile Include="Assets\RestClient\DemoScene\Scripts\Model\User.cs" />
@@ -124,20 +129,25 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\Scenes\Tutorial\Backend_demo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Scripts\FirebaseBridge\FirebaseAuth.cs" />
     <Compile Include="Assets\WebGLSupport\WebGLInput\Wrapper\IInputField.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\FullSerializer\Source\fsMemberSerialization.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Scripts\Objects\FirebaseUserMetadata.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Scenes\Tutorial\LoadSceneButton.cs" />
     <Compile Include="Assets\FullSerializer\Source\Converters\Unity\LayerMask_DirectConverter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Scripts\FirebaseBridge\FirebaseFirestore.cs" />
     <Compile Include="Assets\FullSerializer\Source\Internal\fsOption.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scenes\Tutorial\User.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\FullSerializer\Source\fsData.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Scripts\FirebaseBridge\FirebaseStorage.cs" />
     <Compile Include="Assets\RestClient\Packages\Proyecto26.RestClient\Helpers\ExecuteOnMainThread.cs" />
     <Compile Include="Assets\FullSerializer\Source\Converters\Unity\Gradient_DirectConverter.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Examples\Functions\FunctionsExampleHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\FullSerializer\Source\Converters\Unity\GUIStyle_DirectConverter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
@@ -156,6 +166,8 @@
     <Compile Include="Assets\FullSerializer\Source\fsDirectConverter.cs" />
     <Compile Include="Assets\FullSerializer\Source\Converters\Unity\AnimationCurve_DirectConverter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Examples\Database\DatabaseExampleHandler.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Examples\Utils\StringSerializationAPI.cs" />
     <Compile Include="Assets\FullSerializer\Source\fsBaseConverter.cs" />
     <Compile Include="Assets\RestClient\Packages\Proyecto26.RestClient\Helpers\Common.cs" />
     <Compile Include="Assets\FullSerializer\Source\Reflection\fsMetaProperty.cs" />
@@ -171,21 +183,27 @@
     <Compile Include="Assets\FullSerializer\Source\Converters\fsReflectedConverter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\SimpleJSONUnity.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Scripts\FirebaseBridge\FirebaseFunctions.cs" />
     <Compile Include="Assets\RestClient\Packages\Proyecto26.RestClient\Helpers\RequestHelperExtension.cs" />
     <Compile Include="Assets\RestClient\Packages\Proyecto26.RestClient\Helpers\StaticCoroutine.cs" />
     <Compile Include="Assets\RestClient\DemoScene\Scripts\MainScript.cs" />
     <Compile Include="Assets\FullSerializer\Source\fsObjectProcessor.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Scripts\Objects\FirebaseUserProvider.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Examples\Storage\StorageExampleHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\RestClient\Packages\Proyecto26.RestClient\Helpers\HttpBase.cs" />
     <Compile Include="Assets\FullSerializer\Source\Converters\Unity\GUIStyleState_DirectConverter.cs" />
     <Compile Include="Assets\RestClient\Packages\Proyecto26.RestClient\Helpers\Extensions.cs" />
+    <Compile Include="Assets\FirebaseWebGL\Examples\Auth\AuthExampleHandler.cs" />
     <Compile Include="Assets\RestClient\DemoScene\Scripts\Model\Photo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\WebGLSupport\WebGLInput\Detail\RebuildChecker.cs" />
+    <Compile Include="Assets\Scenes\Tutorial\Database\InternalDB.cs" />
+    <Compile Include="Assets\Scenes\Tutorial\Database\DBHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
@@ -204,6 +222,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\FirebaseWebGL\Documentation.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -220,6 +239,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\FirebaseWebGL\Examples\Storage\README.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />

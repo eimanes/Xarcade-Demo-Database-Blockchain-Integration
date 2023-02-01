@@ -70,7 +70,7 @@ public class NewInput : MonoBehaviour
     {
         CallAuth();
         PlayerPrefs.SetString("bearer", "xar-K1yKcEICAWuh10ZylQOs-bearer-3AQ3fOPMueqBlJS7f7UH-admin-P1ESJbighL6htWzLvPwX");
-        PlayerPrefs.SetString("token_id", "BDT");
+        PlayerPrefs.SetString("token_id", "DTC");
 
         bearer = PlayerPrefs.GetString("bearer");
         username = PlayerPrefs.GetString("username");

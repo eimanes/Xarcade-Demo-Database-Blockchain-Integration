@@ -25,7 +25,8 @@ public class Blockchain : MonoBehaviour
 
     User user = new User();
     public Database Database;
-    public string db_url = "https://fir-token-ccdbb-default-rtdb.asia-southeast1.firebasedatabase.app/";
+    public string db_url;
+    private string db_key = ".json?auth=IyehURIqxdvTlwZkafQs4gemkTHWUaXsVVdQ8Qvt";
 
     public Button ClaimButton;
     public TMP_Text userText;
@@ -218,7 +219,7 @@ public class Blockchain : MonoBehaviour
         int a = PlayerPrefs.GetInt("TokensClaimed");
         User user = new User();
         name = PlayerPrefs.GetString("username");
-        RestClient.Put(db_url + name + ".json", user);
+        RestClient.Put(db_url + name + db_key, user);
 
         Debug.Log("Total tokens claimed in db = " + a);
         Debug.Log("Total score in database resets to 0");

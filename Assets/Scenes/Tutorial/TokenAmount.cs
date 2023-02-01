@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Scenes.Tutorial.Database;
+using FirebaseWebGL.Scripts.FirebaseBridge;
 using UnityEngine;
 using Proyecto26;
 using TMPro;
@@ -11,7 +13,8 @@ public class TokenAmount : MonoBehaviour
     public int currentScore = 0;
     public int totalScore;
     public GameObject AddButton;
-    [SerializeField] public string db_url = "https://fir-token-ccdbb-default-rtdb.asia-southeast1.firebasedatabase.app/";
+    [SerializeField] public string db_url = "https://bot-game-a4374-default-rtdb.asia-southeast1.firebasedatabase.app/";
+    private string db_key = ".json?auth=IyehURIqxdvTlwZkafQs4gemkTHWUaXsVVdQ8Qvt";
     public Database Database;
 
     //Update the current score, when '+1' button is clicked.
@@ -22,7 +25,8 @@ public class TokenAmount : MonoBehaviour
         currentScore += 1;
         PlayerPrefs.SetInt("CurrentScore", currentScore);
         currentScoreText.text = "" + currentScore;
-        PostToDb();
+        //PostCurrentScore();
+        DBHandler.PostCurrentScore();
     }
 
     //Looping is made to ensure that user cannot add current score more than 3.
@@ -49,9 +53,10 @@ public class TokenAmount : MonoBehaviour
         PlayerPrefs.SetInt("TotalScore", totalScore);
         currentScore = PlayerPrefs.GetInt("CurrentScore");
         currentScoreText.text = "" + currentScore;
-        string time = Database.TimeOfEvents();
+        string time = InternalDB.TimeOfEvents();
         PlayerPrefs.SetString("Time_TotalScoreUpdated", time);
-        PostToDb();
+        //PostTotalScore();
+        DBHandler.PostTotalScore();
     }
 
     //The data will be posted based on the username
@@ -59,7 +64,18 @@ public class TokenAmount : MonoBehaviour
     {
         User user = new User();
         name = PlayerPrefs.GetString("username");
-        RestClient.Put(db_url + name + ".json", user);
+        RestClient.Put(db_url + name + db_key, user);
     }
 
+   /* private void PostCurrentScore()
+    {
+        FirebaseDatabase.PostCurrentScore(InternalDB.nama(), currentScore, *//*gameObject.name,*//*
+        "DisplayInfo", "DisplayErrorObject");
+    }
+
+    private void PostTotalScore()
+    {
+        FirebaseDatabase.PostTotalScore(InternalDB.nama(), totalScore, InternalDB.TotalScoreUpdated(), *//*gameObject.name,*//*
+        "DisplayInfo", "DisplayErrorObject");
+    }*/
 }

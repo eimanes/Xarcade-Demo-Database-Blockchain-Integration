@@ -11,7 +11,8 @@ public class Database : MonoBehaviour
     public TMP_Text TotalScoreDbText;
     public TMP_Text GetDataText;
 
-    [SerializeField] public string db_url = "https://fir-token-ccdbb-default-rtdb.asia-southeast1.firebasedatabase.app/";
+    [SerializeField] public string db_url;
+    private string db_key = ".json?auth=IyehURIqxdvTlwZkafQs4gemkTHWUaXsVVdQ8Qvt";
 
     User user = new User();
 
@@ -77,21 +78,37 @@ public class Database : MonoBehaviour
     {
         User user = new User();
         name = PlayerPrefs.GetString("username");
-        RestClient.Put(db_url + name + ".json", user);
+        RestClient.Post(db_url + db_key, user);
 
     }
+
+
 
     public void Login()
     {
         string time = TimeOfEvents();
         PlayerPrefs.SetString("LoginTime", time);
-        PostToDb();
+        GetAssistingUser();
+    }
+
+    private void GetAssistingUser()
+    {
+        name = PlayerPrefs.GetString("username");
+        RestClient.Get<User>(db_url + db_key).Then(response =>
+        {
+            user = response;
+            if (user.a_Username == name)
+            {
+                RestClient.Put(db_url + name + db_key, user);
+            }
+            else { PostToDb(); }
+        });
     }
 
     public void GetFromDb()
     {
         name = PlayerPrefs.GetString("username");
-        RestClient.Get<User>(db_url + name + ".json").Then(response =>
+        RestClient.Get<User>(db_url + name + db_key).Then(response =>
         {
             user = response;
             TotalScoreDbText.text = "" + user.e_TotalScore;
@@ -103,7 +120,7 @@ public class Database : MonoBehaviour
     public void GetAll()
     {
         name = PlayerPrefs.GetString("username");
-        RestClient.Get<User>(db_url + name + ".json").Then(response =>
+        RestClient.Get<User>(db_url + name + db_key).Then(response =>
         {
             user = response;
             GetDataText.text = "Username: " + user.a_Username + "\n" +
@@ -132,7 +149,7 @@ public class Database : MonoBehaviour
     {
         PlayerPrefs.SetString("db_url", db_url);
         name = PlayerPrefs.GetString("username");
-        RestClient.Get<User>(db_url + name + ".json").Then(response =>
+        RestClient.Get<User>(db_url + name + db_key).Then(response =>
         {
             user = response;
 
@@ -164,7 +181,7 @@ public class Database : MonoBehaviour
     private void Update()
     {
         name = PlayerPrefs.GetString("username");
-        RestClient.Get<User>(db_url + name + ".json").Then(response =>
+        RestClient.Get<User>(db_url + name + db_key).Then(response =>
         {
             user = response;
             PlayerPrefs.SetInt("TotalScore", user.e_TotalScore);

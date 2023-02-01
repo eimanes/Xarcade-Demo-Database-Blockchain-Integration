@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial/Demo Home Scene.unity
     guid: 280dbbd21d02d4942a78e874e2256086
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tutorial/Demo Input Scene.unity
     guid: ee1fe44a87863ac49a0abe85e69f0334
   - enabled: 1
     path: Assets/Scenes/Tutorial/Demo Token Scene.unity
     guid: 0be99950a17373d4a90ae5faf3821c0a
+  - enabled: 0
+    path: Assets/FirebaseWebGL/Examples/Database/DatabaseExampleScene.unity
+    guid: b4ff0b9631585234e9ab812652471125
   m_configObjects: {}
