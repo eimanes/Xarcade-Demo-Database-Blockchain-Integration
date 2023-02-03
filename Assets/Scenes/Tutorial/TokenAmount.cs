@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using Scenes.Tutorial.Database;
-using FirebaseWebGL.Scripts.FirebaseBridge;
 using UnityEngine;
 using Proyecto26;
 using TMPro;
+using Backend.Database;
 
 public class TokenAmount : MonoBehaviour
 {
+    public NewInternalDB idb;
+    public NewDBHandler dbh;
     public TMP_Text currentScoreText;
     public TMP_Text totalScoreText;
     public int currentScore = 0;
@@ -26,7 +27,7 @@ public class TokenAmount : MonoBehaviour
         PlayerPrefs.SetInt("CurrentScore", currentScore);
         currentScoreText.text = "" + currentScore;
         //PostCurrentScore();
-        DBHandler.PostCurrentScore();
+        dbh.PostCurrentScore();
     }
 
     //Looping is made to ensure that user cannot add current score more than 3.
@@ -53,10 +54,10 @@ public class TokenAmount : MonoBehaviour
         PlayerPrefs.SetInt("TotalScore", totalScore);
         currentScore = PlayerPrefs.GetInt("CurrentScore");
         currentScoreText.text = "" + currentScore;
-        string time = InternalDB.TimeOfEvents();
+        string time = idb.TimeOfEvents();
         PlayerPrefs.SetString("Time_TotalScoreUpdated", time);
         //PostTotalScore();
-        DBHandler.PostTotalScore();
+        dbh.PostTotalScore();
     }
 
     //The data will be posted based on the username

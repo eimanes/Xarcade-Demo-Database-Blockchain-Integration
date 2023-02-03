@@ -1,11 +1,11 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Proyecto26;
 using UnityEngine.Networking;
 using TMPro;
 using Scenes.Tutorial.Database;
-using FirebaseWebGL.Scripts.FirebaseBridge;
+using Backend.FirebaseWebGL.Scripts.FirebaseBridge;
 
 public class InternalDB : MonoBehaviour
 {
@@ -125,3 +125,4 @@ public class InternalDB : MonoBehaviour
 
 
 }
+*/

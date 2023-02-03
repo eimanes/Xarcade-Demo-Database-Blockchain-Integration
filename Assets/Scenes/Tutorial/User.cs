@@ -1,7 +1,8 @@
-using System.Collections;
+/*using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Backend.Database;
 
 
 //Create a class that calls all the parameters to save in db
@@ -9,6 +10,7 @@ using UnityEngine;
 [Serializable]
 public class User
 {
+    
     public string a_Username;
     public string b_TokenID;
     public string c_LoginTime;
@@ -20,14 +22,13 @@ public class User
 
     public User()
     {
-        a_Username = Database.nama();
-        b_TokenID = Database.token_id();
-        c_LoginTime = Database.LastLogin();
-        d_CurrentScore = Database.CurrentScore();
-        e_TotalScore = Database.TotalScore();
+        d_TotalScore = Database.TotalScore();
+        f_TokensReq = 
         g_TokensClaimed = Database.TokensClaimed();
+
         f_LastTotalScoreUpdated = Database.LastTotalScoreUpdated();
         h_LastTokensClaimedUpdated = Database.LastTokensClaimedUpdated();
     }
 }
 
+*/
